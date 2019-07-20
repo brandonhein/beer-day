@@ -7,7 +7,8 @@ module.exports = {
             portNumber = process.env.PORT;
         }
 
-        console.log("Beer-Day is listening on port: " + portNumber);
-        app.listen(portNumber);
+        app.listen(portNumber, function(req, res){
+            console.log("Beer-Day is running on port: " + portNumber);
+        });
     }
 }
